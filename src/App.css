@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,187 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+:root {
+  /*변수 선언*/
+  --primary: #0bf;
+  --secondary: #333;
+  --success: #0b0;
+  --danger: #d00;
+}
+
+* {
+  /* 전체 선택자*/
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #eee;
+}
+
+a {
+  color: #000;
+}
+
+button {
+  font-size: 1rem;
+  background-color: transparent;
+  border-radius: 0.25rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.25;
+  cursor: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+/* app */
+.app-title {
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-container {
+  max-width: 24rem;
+  margin: 50px auto 0;
+  padding: 0 1rem 1rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.remaining {
+  margin: 1rem 0;
+}
+
+/* form */
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+.add-input {
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  border: 2px solid var(--secondary);
+  outline: none;
+}
+
+.add-btn {
+  padding: 0.5rem;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+/* filter buttons */
+.filter-btn-group {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.filter-btn {
+  padding: 0.5rem;
+  /* flex: flex-shrink flex-grow flex-basis */
+  flex: 1 1 0;
+  border: 2px solid var(--secondary);
+  color: var(--secondary);
+}
+
+.filter-btn.active {
+  background-color: var(--secondary);
+  color: #fff;
+}
+
+/* todo item*/
+.todo-item {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.view-template,
+.edit-template {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.todo-checkbox {
+  display: none;
+}
+
+.todo-name {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+.todo-checkbox:checked + .todo-name {
+  text-decoration: line-through;
+  text-decoration-color: var(--primary);
+}
+
+.view-btn-group {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.view-btn-group button {
+  padding: 0.5rem;
+  flex: 1 1 0;
+}
+
+.edit-btn {
+  border: 2px solid var(--secondary);
+  color: var(--secondary);
+}
+
+.delete-btn {
+  border: 2px solid var(--danger);
+  color: var(--danger);
+}
+
+.edit-input {
+  padding: 0.5rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  outline: none;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+.edit-btn-group {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.edit-btn-group button {
+  flex: 1 1 0;
+  padding: 0.5rem;
+}
+
+.cancel-btn {
+  border: 2px solid var(--secondary);
+  color: var(--secondary);
+}
+
+.save-btn {
+  border: 2px solid var(--success);
+  color: var(--success);
 }
